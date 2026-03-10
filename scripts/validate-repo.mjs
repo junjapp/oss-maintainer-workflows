@@ -11,6 +11,7 @@ export const requiredPaths = [
   "SECURITY.md",
   "CHANGELOG.md",
   ".github/CODEOWNERS",
+  ".github/release.yml",
   ".github/pull_request_template.md",
   ".github/ISSUE_TEMPLATE/bug-report.yml",
   ".github/ISSUE_TEMPLATE/docs-request.yml",

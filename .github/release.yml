@@ -1,0 +1,14 @@
+changelog:
+  categories:
+    - title: Highlights
+      labels:
+        - release
+    - title: Documentation
+      labels:
+        - docs
+    - title: Workflow
+      labels:
+        - workflow
+  exclude:
+    labels:
+      - skip-changelog

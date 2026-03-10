@@ -58,6 +58,13 @@ npm test
 npm run validate:repo
 ```
 
+## Minimal rollout path
+
+1. Start by keeping only the issue templates and docs your repository will actually use.
+2. Replace every placeholder maintainer reference with a real name, team, or ownership rule.
+3. Treat the first release as a structure check, not as a feature milestone.
+4. Only add more automation after the basic intake, review, and release routine stays stable for a few weeks.
+
 ## Common adjustments
 
 - replace the generic project description with the actual repository purpose

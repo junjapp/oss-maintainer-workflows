@@ -72,3 +72,7 @@ test("requiredPaths stay limited to the public scaffold", () => {
     ".github/workflows/validate.yml",
   ]);
 });
+
+test("requiredPaths include release metadata used by GitHub releases", () => {
+  assert.ok(requiredPaths.includes(".github/release.yml"));
+});

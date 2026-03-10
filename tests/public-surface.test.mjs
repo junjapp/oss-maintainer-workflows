@@ -13,6 +13,7 @@ const publicFiles = [
   "docs/release-playbook.md",
   ".github/workflows/validate.yml",
   ".github/workflows/release-check.yml",
+  ".github/release.yml",
 ];
 
 test("public repository surface keeps the expected public docs set", async () => {
@@ -70,4 +71,27 @@ test("git tracked files exclude local-only materials", () => {
   assert.ok(!trackedFiles.includes("AGENTS.md"));
   assert.ok(!trackedFiles.some((item) => item.startsWith(".private/")));
   assert.ok(!trackedFiles.some((item) => item.startsWith(".agents/")));
+});
+
+test("public docs describe a concrete adoption and release path", async () => {
+  const repoRoot = path.resolve(process.cwd());
+  const readme = await fs.readFile(path.join(repoRoot, "README.md"), "utf8");
+  const chineseReadme = await fs.readFile(
+    path.join(repoRoot, "README.zh-CN.md"),
+    "utf8",
+  );
+  const releasePlaybook = await fs.readFile(
+    path.join(repoRoot, "docs", "release-playbook.md"),
+    "utf8",
+  );
+  const exampleReadme = await fs.readFile(
+    path.join(repoRoot, "examples", "basic-template", "README.md"),
+    "utf8",
+  );
+
+  assert.match(readme, /Minimal rollout path/);
+  assert.match(chineseReadme, /最小落地路径/);
+  assert.match(releasePlaybook, /版本约定/);
+  assert.match(releasePlaybook, /Release note/);
+  assert.match(exampleReadme, /Before you copy this scaffold/);
 });
