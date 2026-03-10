@@ -1,0 +1,25 @@
+name: Workflow improvement
+description: Propose a better maintainer workflow, automation, or template.
+title: "[workflow] "
+labels:
+  - workflow
+body:
+  - type: textarea
+    id: current_state
+    attributes:
+      label: Current state
+      description: What is painful or unclear about the current workflow?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Describe the smallest useful improvement.
+    validations:
+      required: true
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: Tradeoffs
+      description: What complexity or maintenance cost would this add?

@@ -1,0 +1,21 @@
+{
+  "name": "oss-maintainer-workflows",
+  "version": "0.1.0",
+  "description": "A reusable workflow kit for open-source maintainers.",
+  "type": "module",
+  "private": false,
+  "scripts": {
+    "test": "node --test",
+    "validate:repo": "node scripts/validate-repo.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "open-source",
+    "maintainer",
+    "github-actions",
+    "workflow-template"
+  ],
+  "license": "MIT"
+}

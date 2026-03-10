@@ -1,0 +1,25 @@
+name: Release checks
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Verify changelog structure
+        run: |
+          test -f CHANGELOG.md
+          grep -q '^## \[Unreleased\]' CHANGELOG.md
+          grep -q '^## \[0.1.0\]' CHANGELOG.md
+
+      - name: Verify release documentation
+        run: |
+          test -f docs/release-playbook.md
+          test -f .github/CODEOWNERS

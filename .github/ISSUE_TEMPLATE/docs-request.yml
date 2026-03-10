@@ -1,0 +1,25 @@
+name: Docs request
+description: Request improvements to maintainer-facing documentation.
+title: "[docs] "
+labels:
+  - docs
+body:
+  - type: textarea
+    id: gap
+    attributes:
+      label: Documentation gap
+      description: What information is missing, unclear, or outdated?
+    validations:
+      required: true
+  - type: textarea
+    id: audience
+    attributes:
+      label: Intended reader
+      description: Who is blocked by this gap?
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_update
+    attributes:
+      label: Proposed update
+      description: If you already know the fix, describe it here.
