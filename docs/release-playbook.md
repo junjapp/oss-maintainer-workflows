@@ -17,6 +17,16 @@
 - `Workflow`：校验、发布或治理相关的调整
 - `Follow-up`：明确哪些事情被留到下一个小版本
 
+## Pre-tag command sequence
+
+```bash
+npm test
+npm run validate:repo
+git status --short
+```
+
+只有当测试通过、骨架校验通过、工作区状态符合预期时，才继续打 tag。
+
 发布前检查：
 
 1. 运行 `npm test`

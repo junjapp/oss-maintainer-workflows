@@ -65,6 +65,12 @@ npm run validate:repo
 3. Treat the first release as a structure check, not as a feature milestone.
 4. Only add more automation after the basic intake, review, and release routine stays stable for a few weeks.
 
+## Repository boundary
+
+- This repository should describe how maintainers run intake, review, release, and ownership work.
+- It should not grow into a product starter, internal operations dashboard, or generic automation dump.
+- If a file cannot be explained to an outside maintainer in a few sentences, it probably does not belong here.
+
 ## Common adjustments
 
 - replace the generic project description with the actual repository purpose

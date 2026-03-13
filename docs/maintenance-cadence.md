@@ -18,6 +18,12 @@ Keep repository operations predictable, lightweight, and easy to maintain over t
 3. Update contributor-facing docs when templates or repository behavior change.
 4. Close or split oversized tasks so the backlog stays understandable.
 
+## Weekly outputs
+
+- a small issue list that still matches the real backlog
+- docs and templates that still describe the current workflow
+- at most one or two follow-up tasks large enough for the next release
+
 ## Release rhythm
 
 - Treat small, well-documented releases as the default.

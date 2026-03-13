@@ -88,10 +88,18 @@ test("public docs describe a concrete adoption and release path", async () => {
     path.join(repoRoot, "examples", "basic-template", "README.md"),
     "utf8",
   );
+  const cadence = await fs.readFile(
+    path.join(repoRoot, "docs", "maintenance-cadence.md"),
+    "utf8",
+  );
 
   assert.match(readme, /Minimal rollout path/);
+  assert.match(readme, /Repository boundary/);
   assert.match(chineseReadme, /最小落地路径/);
+  assert.match(chineseReadme, /仓库边界/);
   assert.match(releasePlaybook, /版本约定/);
   assert.match(releasePlaybook, /Release note/);
+  assert.match(releasePlaybook, /Pre-tag command sequence/);
+  assert.match(cadence, /Weekly outputs/);
   assert.match(exampleReadme, /Before you copy this scaffold/);
 });

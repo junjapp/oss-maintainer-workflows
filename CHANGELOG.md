@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
-- Refined README guidance, release notes, and example adoption docs.
+- Refined repository boundary docs, weekly cadence notes, and release guidance.
 
 ## [0.1.0] - 2026-03-10
 
