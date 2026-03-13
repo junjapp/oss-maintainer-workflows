@@ -88,6 +88,10 @@ test("public docs describe a concrete adoption and release path", async () => {
     path.join(repoRoot, "examples", "basic-template", "README.md"),
     "utf8",
   );
+  const roadmap = await fs.readFile(
+    path.join(repoRoot, "docs", "project-roadmap.md"),
+    "utf8",
+  );
   const cadence = await fs.readFile(
     path.join(repoRoot, "docs", "maintenance-cadence.md"),
     "utf8",
@@ -102,4 +106,6 @@ test("public docs describe a concrete adoption and release path", async () => {
   assert.match(releasePlaybook, /Pre-tag command sequence/);
   assert.match(cadence, /Weekly outputs/);
   assert.match(exampleReadme, /Before you copy this scaffold/);
+  assert.match(exampleReadme, /After the first release/);
+  assert.match(roadmap, /How to use this roadmap/);
 });

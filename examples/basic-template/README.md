@@ -13,4 +13,10 @@ This directory shows the minimum repository structure another project should kee
 - remove any template file that your repository will not actively maintain
 - make sure the copied docs describe the real repository, not this example
 
+## After the first release
+
+- trim any copied template text that no longer matches the repository
+- capture one or two small follow-up changes instead of rewriting the whole scaffold
+- keep the next release scoped to maintainer-facing docs, templates, or workflow checks
+
 Use this as a checklist, not as a second product.

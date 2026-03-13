@@ -14,6 +14,12 @@
 - Improve the docs so a maintainer can copy the scaffold with minimal rewriting.
 - Record small follow-up changes after the first release instead of folding everything into one large update.
 
+## How to use this roadmap
+
+- Keep the `Next` section limited to small changes that can plausibly land in the next release.
+- Move completed items into release notes or follow-up issues instead of leaving stale bullets behind.
+- If a roadmap item turns into project-specific work, remove it from this template instead of broadening the repository boundary.
+
 ## Later
 
 - Expand the reusable skills and workflow templates based on real usage.
