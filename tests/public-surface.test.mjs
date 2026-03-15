@@ -104,6 +104,7 @@ test("public docs describe a concrete adoption and release path", async () => {
   assert.match(releasePlaybook, /版本约定/);
   assert.match(releasePlaybook, /Release note/);
   assert.match(releasePlaybook, /Pre-tag command sequence/);
+  assert.match(releasePlaybook, /When to ship a v0\.1\.x release/);
   assert.match(cadence, /Weekly outputs/);
   assert.match(exampleReadme, /Before you copy this scaffold/);
   assert.match(exampleReadme, /After the first release/);

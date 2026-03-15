@@ -27,6 +27,12 @@ git status --short
 
 只有当测试通过、骨架校验通过、工作区状态符合预期时，才继续打 tag。
 
+## When to ship a v0.1.x release
+
+- Ship a small `v0.1.x` release when docs, templates, or release checks have changed in a way another maintainer would notice.
+- Keep the scope narrow enough that the release note can be read in under a minute.
+- If the change belongs only to one consuming repository, leave it out of this template and keep it project-specific.
+
 发布前检查：
 
 1. 运行 `npm test`
