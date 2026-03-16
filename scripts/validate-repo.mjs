@@ -5,7 +5,6 @@ import url from "node:url";
 export const requiredPaths = [
   "package-lock.json",
   "README.md",
-  "README.zh-CN.md",
   "LICENSE",
   "CONTRIBUTING.md",
   "SECURITY.md",

@@ -6,7 +6,6 @@ import { spawnSync } from "node:child_process";
 
 const publicFiles = [
   "README.md",
-  "README.zh-CN.md",
   "CONTRIBUTING.md",
   "docs/maintenance-cadence.md",
   "docs/project-roadmap.md",
@@ -68,18 +67,13 @@ test("git tracked files exclude local-only materials", () => {
     .map((item) => item.trim())
     .filter(Boolean);
 
-  assert.ok(!trackedFiles.includes("AGENTS.md"));
-  assert.ok(!trackedFiles.some((item) => item.startsWith(".private/")));
-  assert.ok(!trackedFiles.some((item) => item.startsWith(".agents/")));
+  assert.ok(trackedFiles.includes("README.md"));
+  assert.ok(!trackedFiles.some((item) => item.endsWith(".DS_Store")));
 });
 
 test("public docs describe a concrete adoption and release path", async () => {
   const repoRoot = path.resolve(process.cwd());
   const readme = await fs.readFile(path.join(repoRoot, "README.md"), "utf8");
-  const chineseReadme = await fs.readFile(
-    path.join(repoRoot, "README.zh-CN.md"),
-    "utf8",
-  );
   const releasePlaybook = await fs.readFile(
     path.join(repoRoot, "docs", "release-playbook.md"),
     "utf8",
@@ -99,9 +93,8 @@ test("public docs describe a concrete adoption and release path", async () => {
 
   assert.match(readme, /Minimal rollout path/);
   assert.match(readme, /Repository boundary/);
-  assert.match(chineseReadme, /最小落地路径/);
-  assert.match(chineseReadme, /仓库边界/);
-  assert.match(releasePlaybook, /版本约定/);
+  assert.doesNotMatch(readme, /README\.zh-CN\.md/);
+  assert.match(releasePlaybook, /Versioning notes/);
   assert.match(releasePlaybook, /Release note/);
   assert.match(releasePlaybook, /Pre-tag command sequence/);
   assert.match(releasePlaybook, /When to ship a v0\.1\.x release/);

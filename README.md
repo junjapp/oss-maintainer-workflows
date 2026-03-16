@@ -30,7 +30,6 @@ It is intentionally not an app starter. It is a repository operations starter.
 
 - root documentation:
   - `README.md`
-  - `README.zh-CN.md`
   - `CONTRIBUTING.md`
   - `SECURITY.md`
   - `CHANGELOG.md`
@@ -49,7 +48,7 @@ It is intentionally not an app starter. It is a repository operations starter.
 ## Quick start
 
 1. Copy this repository into a public project or mark it as a GitHub template repository.
-2. Update `README.md`, `README.zh-CN.md`, and `CODEOWNERS` with your project details.
+2. Update `README.md` and `CODEOWNERS` with your project details.
 3. Review the public docs and adapt them to your repository.
 4. Run the repository checks:
 

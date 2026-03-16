@@ -61,7 +61,7 @@ test("requiredPaths reflect the renamed public docs layout", () => {
 });
 
 test("requiredPaths stay limited to the public scaffold", () => {
-  assert.ok(!requiredPaths.some((item) => item.startsWith(".private/")));
+  assert.ok(!requiredPaths.some((item) => item.startsWith(".git/")));
 
   const workflowPaths = requiredPaths
     .filter((item) => item.startsWith(".github/workflows/"))

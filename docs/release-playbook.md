@@ -1,21 +1,21 @@
-# 发布操作说明
+# Release playbook
 
 ## `v0.1.0`
 
-首个公开版本的目标不是“功能很多”，而是“结构稳定、说明清楚、可以持续维护”。
+The first public release should optimize for stability, clarity, and maintainability rather than breadth.
 
-## 版本约定
+## Versioning notes
 
-- `v0.1.0`：首次公开可用版本，重点是结构完整和说明一致。
-- `v0.1.x`：修正文档、模板、工作流细节，不扩大仓库边界。
-- `v0.2.0`：在至少一次真实维护节奏之后，再加入新的公开模板或示例。
+- `v0.1.0`: the first public cut, focused on a complete and consistent scaffold
+- `v0.1.x`: documentation, template, and workflow refinements that keep the repository boundary stable
+- `v0.2.0`: broader public additions after the scaffold has already been maintained in real use
 
-## Release note 结构
+## Release note structure
 
-- `Highlights`：本次版本最值得维护者注意的变化
-- `Documentation`：README、贡献说明、示例或模板的更新
-- `Workflow`：校验、发布或治理相关的调整
-- `Follow-up`：明确哪些事情被留到下一个小版本
+- `Highlights`: the maintainer-facing changes worth noticing first
+- `Documentation`: updates to the README, contributor docs, examples, or templates
+- `Workflow`: validation, release, or governance changes
+- `Follow-up`: the items intentionally deferred to the next small release
 
 ## Pre-tag command sequence
 
@@ -25,7 +25,7 @@ npm run validate:repo
 git status --short
 ```
 
-只有当测试通过、骨架校验通过、工作区状态符合预期时，才继续打 tag。
+Only tag a release after tests pass, the scaffold check passes, and the working tree is in the expected state.
 
 ## When to ship a v0.1.x release
 
@@ -33,17 +33,17 @@ git status --short
 - Keep the scope narrow enough that the release note can be read in under a minute.
 - If the change belongs only to one consuming repository, leave it out of this template and keep it project-specific.
 
-发布前检查：
+## Pre-release checklist
 
-1. 运行 `npm test`
-2. 运行 `npm run validate:repo`
-3. 检查 `CHANGELOG.md`
-4. 检查 README、Issue 模板、PR 模板是否与当前仓库一致
-5. 确认 `CODEOWNERS`、`SECURITY.md` 没有占位内容
+1. Run `npm test`
+2. Run `npm run validate:repo`
+3. Review `CHANGELOG.md`
+4. Confirm the README, issue templates, and PR template still match the repository
+5. Confirm `CODEOWNERS` and `SECURITY.md` do not contain placeholder content
 
-发布后动作：
+## Post-release follow-up
 
-1. 创建 GitHub Release
-2. 开一个跟进 issue，记录 `v0.1.x` 需要补的文档、模板或流程调整
-3. 分批提交后续改进，不要把所有变化都塞进首发版本
-4. 下一次发布前，先回看本次 release note 是否和 README、模板、工作流保持一致
+1. Create the GitHub release entry
+2. Open a follow-up issue for `v0.1.x` documentation, template, or workflow adjustments
+3. Land follow-up changes in small batches instead of overloading the first release
+4. Before the next release, compare the release notes against the README, templates, and workflows
