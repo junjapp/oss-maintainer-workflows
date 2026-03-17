@@ -19,4 +19,10 @@ This directory shows the minimum repository structure another project should kee
 - capture one or two small follow-up changes instead of rewriting the whole scaffold
 - keep the next release scoped to maintainer-facing docs, templates, or workflow checks
 
+## First follow-up issue
+
+- open one issue dedicated to trimming copied template text
+- note any repository-specific files that still need a maintainer rewrite
+- keep the first follow-up issue small enough to close in one short release
+
 Use this as a checklist, not as a second product.

@@ -99,7 +99,9 @@ test("public docs describe a concrete adoption and release path", async () => {
   assert.match(releasePlaybook, /Pre-tag command sequence/);
   assert.match(releasePlaybook, /When to ship a v0\.1\.x release/);
   assert.match(cadence, /Weekly outputs/);
+  assert.match(cadence, /First follow-up issue/);
   assert.match(exampleReadme, /Before you copy this scaffold/);
   assert.match(exampleReadme, /After the first release/);
+  assert.match(exampleReadme, /First follow-up issue/);
   assert.match(roadmap, /How to use this roadmap/);
 });

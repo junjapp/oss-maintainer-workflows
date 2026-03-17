@@ -24,6 +24,12 @@ Keep repository operations predictable, lightweight, and easy to maintain over t
 - docs and templates that still describe the current workflow
 - at most one or two follow-up tasks large enough for the next release
 
+## First follow-up issue
+
+- open one small follow-up issue after copying the scaffold
+- use that issue to remove copied text that does not fit the real repository
+- keep the first follow-up issue limited to docs, templates, or release notes
+
 ## Release rhythm
 
 - Treat small, well-documented releases as the default.
