@@ -74,6 +74,14 @@ test("git tracked files exclude local-only materials", () => {
 test("public docs describe a concrete adoption and release path", async () => {
   const repoRoot = path.resolve(process.cwd());
   const readme = await fs.readFile(path.join(repoRoot, "README.md"), "utf8");
+  const codeowners = await fs.readFile(
+    path.join(repoRoot, ".github", "CODEOWNERS"),
+    "utf8",
+  );
+  const security = await fs.readFile(
+    path.join(repoRoot, "SECURITY.md"),
+    "utf8",
+  );
   const releasePlaybook = await fs.readFile(
     path.join(repoRoot, "docs", "release-playbook.md"),
     "utf8",
@@ -92,8 +100,15 @@ test("public docs describe a concrete adoption and release path", async () => {
   );
 
   assert.match(readme, /Minimal rollout path/);
+  assert.match(readme, /Replace before reuse/);
   assert.match(readme, /Repository boundary/);
   assert.doesNotMatch(readme, /README\.zh-CN\.md/);
+  assert.match(readme, /README\.md`?, `?CODEOWNERS`?, and `?SECURITY\.md/);
+  assert.match(readme, /This repository keeps active maintainer values for its own public operation/);
+  assert.match(codeowners, /Replace this entry before reusing the scaffold/);
+  assert.match(codeowners, /This repository keeps an active owner entry because it is the live source repository/);
+  assert.match(security, /Replace the contact path before you reuse this scaffold/);
+  assert.match(security, /contact the active maintainer directly for this repository/);
   assert.match(releasePlaybook, /Versioning notes/);
   assert.match(releasePlaybook, /Release note/);
   assert.match(releasePlaybook, /Pre-tag command sequence/);

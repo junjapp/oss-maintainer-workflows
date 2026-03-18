@@ -6,9 +6,15 @@ Please do not file public issues for undisclosed vulnerabilities.
 
 Use one of the following approaches instead:
 
-- email the maintainer directly
+- contact the active maintainer directly for this repository
 - open a private security advisory if your platform supports it
 - provide reproduction details, impact, and suggested mitigation
+
+## Replace before you reuse this scaffold
+
+- Replace the contact path before you reuse this scaffold in another repository.
+- Do not keep another maintainer's direct contact wording in a copied repository.
+- Make the reporting path specific enough that a first-time visitor can tell what is active and what has already been replaced.
 
 ## Scope
 

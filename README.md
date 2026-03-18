@@ -48,8 +48,8 @@ It is intentionally not an app starter. It is a repository operations starter.
 ## Quick start
 
 1. Copy this repository into a public project or mark it as a GitHub template repository.
-2. Update `README.md` and `CODEOWNERS` with your project details.
-3. Review the public docs and adapt them to your repository.
+2. Replace maintainer-specific defaults in `README.md`, `CODEOWNERS`, and `SECURITY.md` before the first public release.
+3. Review the public docs and remove anything your repository will not actively maintain.
 4. Run the repository checks:
 
 ```bash
@@ -57,12 +57,21 @@ npm test
 npm run validate:repo
 ```
 
+## Replace before reuse
+
+- replace maintainer identity and contact details in `README.md`, `CODEOWNERS`, and `SECURITY.md`
+- trim issue templates, release guidance, and roadmap notes that your repository will not keep
+- remove example wording as soon as your repository has its own maintainer routine
+
+This repository keeps active maintainer values for its own public operation. Downstream repositories should replace those values immediately instead of treating them as scaffold defaults.
+
 ## Minimal rollout path
 
 1. Start by keeping only the issue templates and docs your repository will actually use.
-2. Replace every placeholder maintainer reference with a real name, team, or ownership rule.
+2. Replace every maintainer-specific default with a real name, team, ownership rule, or security contact for your repository.
 3. Treat the first release as a structure check, not as a feature milestone.
-4. Only add more automation after the basic intake, review, and release routine stays stable for a few weeks.
+4. Confirm that `README.md`, `CODEOWNERS`, and `SECURITY.md` no longer read like copied example content.
+5. Only add more automation after the basic intake, review, and release routine stays stable for a few weeks.
 
 ## Repository boundary
 
@@ -74,7 +83,7 @@ npm run validate:repo
 
 - replace the generic project description with the actual repository purpose
 - review the issue templates and remove anything your repository will not maintain
-- confirm `CODEOWNERS`, `SECURITY.md`, and release notes reflect real maintainers
+- confirm `README.md`, `CODEOWNERS`, `SECURITY.md`, and release notes reflect real maintainers
 - keep the roadmap short and aligned with the work you will actually ship
 - remove example content that does not match your repository scope
 

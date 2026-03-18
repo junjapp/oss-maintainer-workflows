@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+- Clarified which maintainer-specific defaults must be replaced before reusing the scaffold.
+- Tightened README, CODEOWNERS, and SECURITY guidance around active repository settings versus copied template content.
+
 ## [0.1.2] - 2026-03-17
 
 - Added a first follow-up issue checklist to the example scaffold so maintainers can turn copied template text into small, concrete next actions.
