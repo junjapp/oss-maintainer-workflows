@@ -69,6 +69,9 @@ test("git tracked files exclude local-only materials", () => {
 
   assert.ok(trackedFiles.includes("README.md"));
   assert.ok(!trackedFiles.some((item) => item.endsWith(".DS_Store")));
+  assert.ok(!trackedFiles.includes("AGENTS.md"));
+  assert.ok(!trackedFiles.some((item) => item.startsWith(".private/")));
+  assert.ok(!trackedFiles.some((item) => item.startsWith(".agents/")));
 });
 
 test("public docs describe a concrete adoption and release path", async () => {
