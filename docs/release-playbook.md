@@ -7,7 +7,7 @@ The first public release should optimize for stability, clarity, and maintainabi
 ## Versioning notes
 
 - `v0.1.0`: the first public cut, focused on a complete and consistent scaffold
-- `v0.1.x`: documentation, template, and workflow refinements that keep the repository boundary stable
+- `v0.1.x`: documentation, template, and workflow refinements that keep the scaffold focused and consistent
 - `v0.2.0`: broader public additions after the scaffold has already been maintained in real use
 - If package metadata is present, keep the package version aligned with the latest released repository state.
 - If the repository uses a custom release cadence, update the checks instead of leaving a stale fixed version heading in place.

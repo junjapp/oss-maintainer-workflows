@@ -19,7 +19,7 @@
 
 - Keep the `Next` section limited to small changes that can plausibly land in the next release.
 - Move completed items into release notes or follow-up issues instead of leaving stale bullets behind.
-- If a roadmap item turns into project-specific work, remove it from this template instead of broadening the repository boundary.
+- If a roadmap item turns into project-specific work, remove it from this template instead of stretching the scaffold beyond its intended scope.
 
 ## Later
 
