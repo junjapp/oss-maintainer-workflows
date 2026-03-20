@@ -23,10 +23,32 @@ export const requiredPaths = [
   "examples/basic-template/README.md"
 ];
 
+async function loadRequiredPathsOverride(rootDirectory) {
+  const overridePath = path.join(rootDirectory, "maintainer-workflows.paths.json");
+
+  try {
+    const raw = await fs.readFile(overridePath, "utf8");
+    const parsed = JSON.parse(raw);
+
+    if (
+      Array.isArray(parsed.requiredPaths) &&
+      parsed.requiredPaths.every((item) => typeof item === "string")
+    ) {
+      return parsed.requiredPaths;
+    }
+  } catch {
+    return null;
+  }
+
+  return null;
+}
+
 export async function collectMissingPaths(rootDirectory) {
+  const overriddenPaths = await loadRequiredPathsOverride(rootDirectory);
+  const activePaths = overriddenPaths ?? requiredPaths;
   const missing = [];
 
-  for (const relativePath of requiredPaths) {
+  for (const relativePath of activePaths) {
     const absolutePath = path.join(rootDirectory, relativePath);
 
     try {

@@ -98,13 +98,18 @@ test("public docs describe a concrete adoption and release path", async () => {
     path.join(repoRoot, "docs", "maintenance-cadence.md"),
     "utf8",
   );
+  const packageJson = JSON.parse(
+    await fs.readFile(path.join(repoRoot, "package.json"), "utf8"),
+  );
 
   assert.match(readme, /Minimal rollout path/);
   assert.match(readme, /Replace before reuse/);
+  assert.match(readme, /Validation baseline/);
   assert.match(readme, /Repository boundary/);
   assert.doesNotMatch(readme, /README\.zh-CN\.md/);
   assert.match(readme, /README\.md`?, `?CODEOWNERS`?, and `?SECURITY\.md/);
   assert.match(readme, /This repository keeps active maintainer values for its own public operation/);
+  assert.match(readme, /maintainer-workflows\.paths\.json/);
   assert.match(codeowners, /Replace this entry before reusing the scaffold/);
   assert.match(codeowners, /This repository keeps an active owner entry because it is the live source repository/);
   assert.match(security, /Replace the contact path before you reuse this scaffold/);
@@ -115,14 +120,18 @@ test("public docs describe a concrete adoption and release path", async () => {
   assert.match(releasePlaybook, /When to ship a v0\.1\.x release/);
   assert.match(releasePlaybook, /Replace-first review/);
   assert.match(releasePlaybook, /same issue thread or release note follow-up/);
+  assert.match(releasePlaybook, /package version aligned with the latest released repository state/);
   assert.match(cadence, /Weekly outputs/);
   assert.match(cadence, /First follow-up issue/);
   assert.match(cadence, /Post-release follow-up/);
   assert.match(exampleReadme, /Before you copy this scaffold/);
   assert.match(exampleReadme, /After the first release/);
+  assert.match(exampleReadme, /First adoption example/);
   assert.match(exampleReadme, /First follow-up issue/);
   assert.match(exampleReadme, /Replace first/);
   assert.match(exampleReadme, /README\.md`?, `?CODEOWNERS`?, and `?SECURITY\.md/);
+  assert.match(exampleReadme, /adaptation example first/);
   assert.match(roadmap, /How to use this roadmap/);
   assert.match(roadmap, /copy and cleanup cycle/);
+  assert.equal(packageJson.version, "0.1.4");
 });

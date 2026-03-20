@@ -35,6 +35,27 @@ test("collectMissingPaths passes when every required path exists", async () => {
   assert.deepEqual(missing, []);
 });
 
+test("collectMissingPaths accepts a local requiredPaths override for downstream repos", async () => {
+  const tempRoot = await fs.mkdtemp(path.join(os.tmpdir(), "maintainer-kit-override-"));
+
+  await fs.writeFile(
+    path.join(tempRoot, "maintainer-workflows.paths.json"),
+    JSON.stringify({
+      requiredPaths: [
+        "README.md",
+        "docs/custom-maintenance.md",
+      ],
+    }, null, 2),
+  );
+  await fs.writeFile(path.join(tempRoot, "README.md"), "# Example\n");
+  await fs.mkdir(path.join(tempRoot, "docs"), { recursive: true });
+  await fs.writeFile(path.join(tempRoot, "docs", "custom-maintenance.md"), "ok\n");
+
+  const missing = await collectMissingPaths(tempRoot);
+
+  assert.deepEqual(missing, []);
+});
+
 test("repository root includes the full maintainer scaffold", async () => {
   const repoRoot = path.resolve(
     path.dirname(url.fileURLToPath(import.meta.url)),

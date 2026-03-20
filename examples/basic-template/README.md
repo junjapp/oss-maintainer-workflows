@@ -25,10 +25,16 @@ This directory shows the minimum repository structure another project should kee
 - capture one or two small follow-up changes instead of rewriting the whole scaffold
 - keep the next release scoped to maintainer-facing docs, templates, or workflow checks
 
+## First adoption example
+
+- replace the copied project description with one specific to the downstream repository
+- keep one short note that explains which files were kept, trimmed, or replaced
+- treat the example as proof of adaptation, not as a permanent checklist
+
 ## First follow-up issue
 
 - open one issue dedicated to trimming copied template text
 - note any repository-specific files that still need a maintainer rewrite
 - keep the first follow-up issue small enough to close in one short release
 
-Use this as a checklist, not as a second product.
+Use this as an adaptation example first, and only as a checklist when a repository still has copied text to remove.

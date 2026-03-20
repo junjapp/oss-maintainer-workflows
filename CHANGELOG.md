@@ -4,9 +4,18 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+- Clarified that the validation script describes the source-repository baseline and can be replaced or trimmed by downstream repositories.
+- Tightened the reuse guidance around release/version alignment and example adoption notes.
+
+## [0.1.4] - 2026-03-20
+
+- Extended the replace-first follow-up guidance across the maintenance cadence, project roadmap, release playbook, and example README.
+
+## [0.1.3] - 2026-03-18
+
 - Clarified which maintainer-specific defaults must be replaced before reusing the scaffold.
 - Tightened README, CODEOWNERS, and SECURITY guidance around active repository settings versus copied template content.
-- Added a replace-first review path to the release and maintenance docs so follow-up cleanup stays small and visible.
+- Added a maintainer-facing response loop from external feedback to follow-up release notes.
 
 ## [0.1.2] - 2026-03-17
 

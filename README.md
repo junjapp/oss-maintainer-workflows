@@ -65,6 +65,12 @@ npm run validate:repo
 
 This repository keeps active maintainer values for its own public operation. Downstream repositories should replace those values immediately instead of treating them as scaffold defaults.
 
+## Validation baseline
+
+- `npm test` and `npm run validate:repo` describe the public baseline of this source repository.
+- Downstream repositories can trim, replace, or re-scope those checks once the scaffold is copied.
+- If your repository keeps a different docs layout or workflow set, update the validation script or provide a local `maintainer-workflows.paths.json` override instead of forcing your repository back into this exact shape.
+
 ## Minimal rollout path
 
 1. Start by keeping only the issue templates and docs your repository will actually use.
@@ -84,6 +90,7 @@ This repository keeps active maintainer values for its own public operation. Dow
 - replace the generic project description with the actual repository purpose
 - review the issue templates and remove anything your repository will not maintain
 - confirm `README.md`, `CODEOWNERS`, `SECURITY.md`, and release notes reflect real maintainers
+- align package metadata, changelog sections, and release checks before the next release
 - keep the roadmap short and aligned with the work you will actually ship
 - remove example content that does not match your repository scope
 
