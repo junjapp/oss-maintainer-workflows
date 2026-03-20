@@ -13,6 +13,12 @@ This directory shows the minimum repository structure another project should kee
 - remove any template file that your repository will not actively maintain
 - make sure the copied docs describe the real repository, not this example
 
+## Replace first
+
+- replace maintainer-specific values in `README.md`, `CODEOWNERS`, and `SECURITY.md`
+- remove copied contact or ownership wording that belongs only to the source repository
+- treat this replacement pass as part of the first release, not as optional cleanup
+
 ## After the first release
 
 - trim any copied template text that no longer matches the repository

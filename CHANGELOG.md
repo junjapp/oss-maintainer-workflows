@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 - Clarified which maintainer-specific defaults must be replaced before reusing the scaffold.
 - Tightened README, CODEOWNERS, and SECURITY guidance around active repository settings versus copied template content.
+- Added a replace-first review path to the release and maintenance docs so follow-up cleanup stays small and visible.
 
 ## [0.1.2] - 2026-03-17
 

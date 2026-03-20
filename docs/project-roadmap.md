@@ -6,6 +6,7 @@
 - Stabilize the issue, review, and release flow around a small first public release.
 - Make the example directory easy to copy without pulling in unrelated template surface.
 - Keep every public workflow file small enough that another maintainer can audit it quickly.
+- Keep the copy and cleanup cycle easy to follow after each small maintainer-facing release.
 
 ## Next
 

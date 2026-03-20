@@ -36,6 +36,12 @@ Keep repository operations predictable, lightweight, and easy to maintain over t
 - Update `CHANGELOG.md` before tagging.
 - Make sure the README, issue templates, and release notes describe the same workflow.
 
+## Post-release follow-up
+
+- Re-read the public release notes one day later and check whether they still match the visible repository state.
+- If feedback points to copied defaults or unclear ownership wording, treat that as a small maintainer-facing follow-up rather than a large rewrite.
+- Keep the next adjustment narrow enough that it can be explained in one short issue comment and one short release note.
+
 ## Monthly cleanup
 
 - Review the roadmap and drop anything that no longer fits the repository direction.

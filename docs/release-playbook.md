@@ -41,6 +41,12 @@ Only tag a release after tests pass, the scaffold check passes, and the working 
 4. Confirm the README, issue templates, and PR template still match the repository
 5. Confirm `CODEOWNERS` and `SECURITY.md` do not contain placeholder content
 
+## Replace-first review
+
+- Before a small `v0.1.x` release, re-check `README.md`, `CODEOWNERS`, and `SECURITY.md` together.
+- If an outside maintainer could still confuse active repository values with copied scaffold text, tighten the wording before tagging.
+- If the change was triggered by public feedback, keep the follow-up in the same issue thread or release note follow-up instead of scattering it across new public threads.
+
 ## Post-release follow-up
 
 1. Create the GitHub release entry
