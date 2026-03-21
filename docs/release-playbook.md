@@ -1,6 +1,6 @@
 # Release playbook
 
-## `v0.1.0`
+## First public release
 
 The first public release should optimize for stability, clarity, and maintainability rather than breadth.
 
