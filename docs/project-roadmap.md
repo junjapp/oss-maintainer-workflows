@@ -10,8 +10,8 @@
 
 ## Next
 
-- Add at least one example showing how another repository can adopt this workflow kit.
 - Tighten the release checklist and issue templates based on actual repository use.
+- Keep the adoption example close to a real downstream first pass instead of letting it drift back into checklist copy.
 - Improve the docs so a maintainer can copy the scaffold with minimal rewriting.
 - Record small follow-up changes after the first release instead of folding everything into one large update.
 

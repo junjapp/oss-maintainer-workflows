@@ -1,40 +1,37 @@
-# Basic template example
+# Basic template adoption example
 
-This directory shows the minimum repository structure another project should keep after copying this scaffold:
+This directory shows one realistic first pass after a public repository copies this kit.
 
-- a project-specific `README.md`
-- at least one repository-specific workflow note
-- visible validation and release workflows
-- public docs that explain ownership and contribution paths
+The example repository here is fictional: `docs-ops-handbook`, a small OSS handbook project maintained by two people. They wanted public issue intake, a lightweight release routine, and clear ownership files without pulling in a larger starter.
 
-## Before you copy this scaffold
+## What they kept
 
-- decide who owns issue intake and release decisions
-- remove any template file that your repository will not actively maintain
-- make sure the copied docs describe the real repository, not this example
+- the issue intake template and pull request template
+- the release check workflow and the public validation baseline
+- `CONTRIBUTING.md`, `SECURITY.md`, and the roadmap docs
 
-## Replace first
+## What they changed before the first release
 
-- replace maintainer-specific values in `README.md`, `CODEOWNERS`, and `SECURITY.md`
-- remove copied contact or ownership wording that belongs only to the source repository
-- treat this replacement pass as part of the first release, not as optional cleanup
+- rewrote `README.md` so it described the handbook project instead of this repository
+- replaced the copied maintainer handles and security contact in `CODEOWNERS` and `SECURITY.md`
+- removed any template text that sounded like source-repository copy instead of project-specific guidance
 
-## After the first release
+## What they cut
 
-- trim any copied template text that no longer matches the repository
-- capture one or two small follow-up changes instead of rewriting the whole scaffold
-- keep the next release scoped to maintainer-facing docs, templates, or workflow checks
+- any issue template they did not plan to answer in public
+- roadmap notes that only made sense for the source repository
+- extra example wording once the repo had one concrete adoption pass of its own
 
-## First adoption example
+## What the first release looked like
 
-- replace the copied project description with one specific to the downstream repository
-- keep one short note that explains which files were kept, trimmed, or replaced
-- treat the example as proof of adaptation, not as a permanent checklist
+Their `v0.1.0` was not a feature release. It was the point where the repository stopped reading like a copied scaffold and started reading like `docs-ops-handbook`:
 
-## First follow-up issue
+- the README named the actual project and linked to its own maintainer routine
+- the governance files named real owners
+- the release checks still ran, but the repo-specific docs layout had already been trimmed to match how that team worked
 
-- open one issue dedicated to trimming copied template text
-- note any repository-specific files that still need a maintainer rewrite
-- keep the first follow-up issue small enough to close in one short release
+## Why this example exists
 
-Use this as an adaptation example first, and only as a checklist when a repository still has copied text to remove.
+The goal is simple: show a small, believable adoption pass. Keep the pieces that help you run the repository, rename the parts that belong to your team, and cut anything you are not going to maintain.
+
+If your repository still needs a checklist, use the one in your own follow-up issue. This example is here to show what “copied and adapted” should look like in public.

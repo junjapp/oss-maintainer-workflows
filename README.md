@@ -42,7 +42,7 @@ It is intentionally not an app starter. It is a repository operations starter.
   - `docs/project-roadmap.md`
   - `docs/release-playbook.md`
   - `docs/maintenance-cadence.md`
-- example starter:
+- example adoption pass:
   - `examples/basic-template/README.md`
 
 ## Quick start
@@ -65,6 +65,8 @@ npm run validate:repo
 
 This repository keeps active maintainer values for its own public operation. Downstream repositories should replace those values immediately instead of treating them as scaffold defaults.
 
+If you want to see what that first downstream pass can look like, start with `examples/basic-template/README.md`.
+
 ## Validation baseline
 
 - `npm test` and `npm run validate:repo` describe the public baseline of this source repository.
@@ -79,11 +81,11 @@ This repository keeps active maintainer values for its own public operation. Dow
 4. Confirm that `README.md`, `CODEOWNERS`, and `SECURITY.md` no longer read like copied example content.
 5. Only add more automation after the basic intake, review, and release routine stays stable for a few weeks.
 
-## Repository boundary
+## What tends to belong here
 
-- This repository should describe how maintainers run intake, review, release, and ownership work.
-- It should not grow into a product starter, internal operations dashboard, or generic automation dump.
-- If a file cannot be explained to an outside maintainer in a few sentences, it probably does not belong here.
+- Keep the files that help another maintainer run intake, review, release, and ownership work in public.
+- Leave out product scaffolding, internal dashboards, or a pile of generic automation that is hard to explain.
+- If a file takes a long setup story before another maintainer can place it, it probably belongs somewhere else.
 
 ## Common adjustments
 
