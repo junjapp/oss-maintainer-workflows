@@ -1,6 +1,6 @@
 # oss-maintainer-workflows
 
-A reusable workflow kit for open-source maintainers.
+Reusable maintainer operations kit for small public OSS repositories.
 
 ## What this repository is for
 
@@ -13,6 +13,14 @@ This repository gives OSS maintainers a small, reusable starting point for day-t
 - repository ownership and governance basics
 
 It is intentionally not an app starter. It is a repository operations starter.
+
+## What this repository is not trying to do
+
+- It is not a universal community playbook for every OSS project shape.
+- It is not a replacement for project-specific product docs or contributor onboarding.
+- It is not the right fit if your repository only needs one or two local templates and nothing else.
+
+If your project only needs a lighter setup, copy the smallest useful pieces instead of keeping the whole scaffold.
 
 ## Why this layer matters
 
@@ -41,11 +49,13 @@ This repository exists to keep that layer reusable, inspectable, and easy to ada
 
 - root documentation:
   - `README.md`
+  - `CODE_OF_CONDUCT.md`
   - `CONTRIBUTING.md`
   - `SECURITY.md`
   - `CHANGELOG.md`
 - repository workflow assets:
   - `.github/ISSUE_TEMPLATE/*.yml`
+  - `.github/ISSUE_TEMPLATE/config.yml`
   - `.github/pull_request_template.md`
   - `.github/CODEOWNERS`
   - `.github/workflows/*.yml`
@@ -101,6 +111,7 @@ If you want to see what that first downstream pass can look like, start with `ex
 ## Common adjustments
 
 - replace the generic project description with the actual repository purpose
+- keep only the governance files your repository is willing to maintain in public
 - review the issue templates and remove anything your repository will not maintain
 - confirm `README.md`, `CODEOWNERS`, `SECURITY.md`, and release notes reflect real maintainers
 - align package metadata, changelog sections, and release checks before the next release

@@ -6,10 +6,12 @@ import { spawnSync } from "node:child_process";
 
 const publicFiles = [
   "README.md",
+  "CODE_OF_CONDUCT.md",
   "CONTRIBUTING.md",
   "docs/maintenance-cadence.md",
   "docs/project-roadmap.md",
   "docs/release-playbook.md",
+  ".github/ISSUE_TEMPLATE/config.yml",
   ".github/workflows/validate.yml",
   ".github/workflows/release-check.yml",
   ".github/release.yml",
@@ -104,20 +106,36 @@ test("public docs describe a concrete adoption and release path", async () => {
   const packageJson = JSON.parse(
     await fs.readFile(path.join(repoRoot, "package.json"), "utf8"),
   );
+  const codeOfConduct = await fs.readFile(
+    path.join(repoRoot, "CODE_OF_CONDUCT.md"),
+    "utf8",
+  );
+  const issueTemplateConfig = await fs.readFile(
+    path.join(repoRoot, ".github", "ISSUE_TEMPLATE", "config.yml"),
+    "utf8",
+  );
 
   assert.match(readme, /Minimal rollout path/);
   assert.match(readme, /Replace before reuse/);
   assert.match(readme, /Validation baseline/);
   assert.match(readme, /What tends to belong here/);
+  assert.match(readme, /What this repository is not trying to do/);
+  assert.match(readme, /If your project only needs a lighter setup/);
   assert.doesNotMatch(readme, /README\.zh-CN\.md/);
   assert.match(readme, /README\.md`?, `?CODEOWNERS`?, and `?SECURITY\.md/);
   assert.match(readme, /This repository keeps active maintainer values for its own public operation/);
   assert.match(readme, /maintainer-workflows\.paths\.json/);
   assert.match(readme, /first downstream pass can look like/);
+  assert.match(readme, /CODE_OF_CONDUCT\.md/);
+  assert.match(readme, /\.github\/ISSUE_TEMPLATE\/config\.yml/);
   assert.match(codeowners, /Replace this entry before reusing the scaffold/);
   assert.match(codeowners, /This repository keeps an active owner entry because it is the live source repository/);
   assert.match(security, /Replace the contact path before you reuse this scaffold/);
   assert.match(security, /contact the active maintainer directly for this repository/);
+  assert.match(codeOfConduct, /Contributor Covenant/);
+  assert.match(codeOfConduct, /public, respectful, and workable/);
+  assert.match(issueTemplateConfig, /blank_issues_enabled: false/);
+  assert.match(issueTemplateConfig, /contact_links:/);
   assert.match(releasePlaybook, /Versioning notes/);
   assert.match(releasePlaybook, /Release note/);
   assert.match(releasePlaybook, /Pre-tag command sequence/);
@@ -140,4 +158,8 @@ test("public docs describe a concrete adoption and release path", async () => {
   assert.match(roadmap, /copy and cleanup cycle/);
   assert.match(roadmap, /real downstream first pass/);
   assert.equal(packageJson.version, "0.1.4");
+  assert.equal(
+    packageJson.description,
+    "Reusable maintainer operations kit for small public OSS repositories.",
+  );
 });

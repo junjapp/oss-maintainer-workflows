@@ -1,7 +1,7 @@
 {
   "name": "oss-maintainer-workflows",
   "version": "0.1.4",
-  "description": "A reusable workflow kit for open-source maintainers.",
+  "description": "Reusable maintainer operations kit for small public OSS repositories.",
   "type": "module",
   "private": false,
   "scripts": {
@@ -15,7 +15,9 @@
     "open-source",
     "maintainer",
     "github-actions",
-    "workflow-template"
+    "workflow-template",
+    "issue-templates",
+    "repository-governance"
   ],
   "license": "MIT"
 }

@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+- Added a lightweight code of conduct and issue-template chooser config so copied repositories get a clearer public governance baseline.
+- Tightened the public description so the repository reads as a maintainer operations kit for small public OSS repositories.
 - Clarified that the validation script describes the source-repository baseline and can be replaced or trimmed by downstream repositories.
 - Tightened the reuse guidance around release/version alignment and example adoption notes.
 - Clarified the maintainer-layer problem this repository is meant to solve for small public OSS projects.
