@@ -17,6 +17,7 @@ Good contributions include:
 - improving repository templates
 - clarifying issue intake or review rules
 - expanding examples with real OSS maintenance scenarios
+- making the maintainer-layer value easier to understand for small public projects
 
 Out of scope by default:
 

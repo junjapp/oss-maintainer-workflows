@@ -14,6 +14,17 @@ This repository gives OSS maintainers a small, reusable starting point for day-t
 
 It is intentionally not an app starter. It is a repository operations starter.
 
+## Why this layer matters
+
+Small OSS projects often rebuild the same maintainer-facing surface from scratch:
+
+- how issues get triaged
+- what a pull request should include
+- how releases are checked before tagging
+- where ownership and security contacts live in public
+
+This repository exists to keep that layer reusable, inspectable, and easy to adapt without turning it into a larger framework.
+
 ## Who should use it
 
 - solo maintainers who need a clear public maintenance structure

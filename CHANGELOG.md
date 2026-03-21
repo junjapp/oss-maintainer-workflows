@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file.
 
 - Clarified that the validation script describes the source-repository baseline and can be replaced or trimmed by downstream repositories.
 - Tightened the reuse guidance around release/version alignment and example adoption notes.
+- Clarified the maintainer-layer problem this repository is meant to solve for small public OSS projects.
 
 ## [0.1.4] - 2026-03-20
 
