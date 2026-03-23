@@ -34,6 +34,8 @@ Their first public version was intentionally small:
 
 That was enough to stop the repository reading like copied scaffold text without the full validation layer.
 
+This example also includes a ready-to-copy `maintainer-workflows.paths.json` for repositories that want a tiny validation contract without restoring the full source-repository baseline.
+
 ## Why this example exists
 
 Not every repository should start with the full source-repository baseline. This example is here to show the smaller path: keep the maintainer-facing pieces you will actually use, rename the parts that belong to your repository, and leave the rest out until the project genuinely needs them.

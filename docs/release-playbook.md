@@ -55,3 +55,4 @@ Only tag a release after tests pass, the scaffold check passes, and the working 
 2. Open a follow-up issue for `v0.1.x` documentation, template, or workflow adjustments
 3. Land follow-up changes in small batches instead of overloading the first release
 4. Before the next release, compare the release notes against the README, templates, and workflows
+5. If the drift spans more than one public surface, use the maintenance review issue path so the cleanup stays visible and scoped

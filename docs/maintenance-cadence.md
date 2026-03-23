@@ -23,6 +23,7 @@ Keep repository operations predictable, lightweight, and easy to maintain over t
 - a small issue list that still matches the real backlog
 - docs and templates that still describe the current workflow
 - at most one or two follow-up tasks large enough for the next release
+- one maintenance review issue if the public surface drifted after a release or cleanup pass
 
 ## First follow-up issue
 
@@ -41,6 +42,7 @@ Keep repository operations predictable, lightweight, and easy to maintain over t
 - Re-read the public release notes one day later and check whether they still match the visible repository state.
 - If feedback points to copied defaults or unclear ownership wording, treat that as a small maintainer-facing follow-up rather than a large rewrite.
 - Keep the next adjustment narrow enough that it can be explained in one short issue comment and one short release note.
+- If the public surface needs a dedicated drift pass, open a maintenance review issue instead of burying the checklist in a private note.
 
 ## Monthly cleanup
 

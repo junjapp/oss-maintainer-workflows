@@ -7,8 +7,8 @@ contact_links:
     url: https://github.com/junjapp/oss-maintainer-workflows/issues/new?template=open-question.yml
     about: Use the open question template if the current issue types feel too specific or do not fit your situation yet.
   - name: Reuse and adoption guidance
-    url: https://github.com/junjapp/oss-maintainer-workflows/blob/main/README.md
-    about: Read the README first if you are deciding whether to copy the full scaffold or only keep a lighter subset.
+    url: https://github.com/junjapp/oss-maintainer-workflows/blob/main/SUPPORT.md
+    about: Start here if you need help choosing the right issue path or deciding whether to keep the full scaffold or a lighter subset.
   - name: Security reporting path
     url: https://github.com/junjapp/oss-maintainer-workflows/blob/main/SECURITY.md
     about: Use the security policy for vulnerability reports instead of opening a public issue.

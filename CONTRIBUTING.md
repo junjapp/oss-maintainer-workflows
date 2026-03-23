@@ -16,6 +16,7 @@ Good contributions include:
 - strengthening validation or release workflows
 - improving repository templates
 - clarifying issue intake or review rules
+- improving support routing or maintainer help paths
 - expanding examples with real OSS maintenance scenarios
 - making the maintainer-layer value easier to understand for small public projects
 

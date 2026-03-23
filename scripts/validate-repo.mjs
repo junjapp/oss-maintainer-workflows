@@ -8,6 +8,7 @@ export const requiredPaths = [
   "LICENSE",
   "CODE_OF_CONDUCT.md",
   "CONTRIBUTING.md",
+  "SUPPORT.md",
   "SECURITY.md",
   "CHANGELOG.md",
   ".github/CODEOWNERS",
@@ -16,6 +17,7 @@ export const requiredPaths = [
   ".github/ISSUE_TEMPLATE/config.yml",
   ".github/ISSUE_TEMPLATE/bug-report.yml",
   ".github/ISSUE_TEMPLATE/docs-request.yml",
+  ".github/ISSUE_TEMPLATE/maintenance-review.yml",
   ".github/ISSUE_TEMPLATE/open-question.yml",
   ".github/ISSUE_TEMPLATE/reuse-report.yml",
   ".github/ISSUE_TEMPLATE/workflow-improvement.yml",
@@ -25,7 +27,9 @@ export const requiredPaths = [
   "docs/project-roadmap.md",
   "docs/release-playbook.md",
   "examples/basic-template/README.md",
-  "examples/minimal-copy/README.md"
+  "examples/basic-template/maintainer-workflows.paths.json",
+  "examples/minimal-copy/README.md",
+  "examples/minimal-copy/maintainer-workflows.paths.json"
 ];
 
 async function loadRequiredPathsOverride(rootDirectory) {

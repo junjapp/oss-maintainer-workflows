@@ -84,13 +84,22 @@ test("requiredPaths reflect the renamed public docs layout", () => {
 
   assert.deepEqual(examplePaths, [
     "examples/basic-template/README.md",
+    "examples/basic-template/maintainer-workflows.paths.json",
     "examples/minimal-copy/README.md",
+    "examples/minimal-copy/maintainer-workflows.paths.json",
   ]);
 });
 
 test("requiredPaths include the generic issue intake path", () => {
+  assert.ok(requiredPaths.includes(".github/ISSUE_TEMPLATE/maintenance-review.yml"));
   assert.ok(requiredPaths.includes(".github/ISSUE_TEMPLATE/open-question.yml"));
   assert.ok(requiredPaths.includes(".github/ISSUE_TEMPLATE/reuse-report.yml"));
+});
+
+test("requiredPaths include support routing and example path overrides", () => {
+  assert.ok(requiredPaths.includes("SUPPORT.md"));
+  assert.ok(requiredPaths.includes("examples/basic-template/maintainer-workflows.paths.json"));
+  assert.ok(requiredPaths.includes("examples/minimal-copy/maintainer-workflows.paths.json"));
 });
 
 test("requiredPaths stay limited to the public scaffold", () => {

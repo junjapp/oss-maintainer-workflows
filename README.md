@@ -51,6 +51,7 @@ This repository exists to keep that layer reusable, inspectable, and easy to ada
   - `README.md`
   - `CODE_OF_CONDUCT.md`
   - `CONTRIBUTING.md`
+  - `SUPPORT.md`
   - `SECURITY.md`
   - `CHANGELOG.md`
 - repository workflow assets:
@@ -71,9 +72,10 @@ This repository exists to keep that layer reusable, inspectable, and easy to ada
 
 1. Copy this repository into a public project or mark it as a GitHub template repository.
 2. If you only need the smallest believable copy path, start with `examples/minimal-copy/README.md` before you keep the full validation and release layer.
-3. Replace maintainer-specific defaults in `README.md`, `CODEOWNERS`, and `SECURITY.md` before the first public release.
-4. Review the public docs and remove anything your repository will not actively maintain.
-5. Run the repository checks:
+3. If you are not sure which issue path or copy path fits yet, read `SUPPORT.md` first.
+4. Replace maintainer-specific defaults in `README.md`, `CODEOWNERS`, and `SECURITY.md` before the first public release.
+5. Review the public docs and remove anything your repository will not actively maintain.
+6. Run the repository checks:
 
 ```bash
 npm test
@@ -98,6 +100,7 @@ If a repository cannot cleanly sort incoming reports on day one, keep a neutral 
 - Downstream repositories can trim, replace, or re-scope those checks once the scaffold is copied.
 - If your repository keeps a different docs layout or workflow set, update the validation script or provide a local `maintainer-workflows.paths.json` override instead of forcing your repository back into this exact shape.
 - If you do not want to keep the validation layer at all, the lighter path is documented in `examples/minimal-copy/README.md`.
+- If you do keep the validation layer, copy one of the example `maintainer-workflows.paths.json` files first and trim from there instead of guessing the minimum set from scratch.
 
 ## Minimal rollout path
 
@@ -133,6 +136,8 @@ If you do keep the validation script, make the required path list match the smal
 
 That keeps the public checks truthful while still giving the repository a minimal maintainer contract.
 
+The example directories include ready-to-copy `maintainer-workflows.paths.json` files so the first trim does not have to start from a blank file.
+
 ## What tends to belong here
 
 - Keep the files that help another maintainer run intake, review, release, and ownership work in public.
@@ -159,6 +164,8 @@ That keeps the public checks truthful while still giving the repository a minima
 ## Using this kit?
 
 If you try this in a real repository, open a reuse report and say what you kept, cut, or rewrote on the first pass. That kind of feedback is more useful here than a generic +1 because it shows where the maintainer layer is actually helping and where it still reads too much like the source repository.
+
+If you are not sure which public path fits your question or report, start with `SUPPORT.md`.
 
 ## Next step
 

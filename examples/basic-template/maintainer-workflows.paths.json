@@ -1,0 +1,9 @@
+{
+  "requiredPaths": [
+    "README.md",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    ".github/pull_request_template.md",
+    ".github/ISSUE_TEMPLATE/bug-report.yml"
+  ]
+}

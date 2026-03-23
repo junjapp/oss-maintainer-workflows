@@ -8,6 +8,7 @@ const publicFiles = [
   "README.md",
   "CODE_OF_CONDUCT.md",
   "CONTRIBUTING.md",
+  "SUPPORT.md",
   "docs/maintenance-cadence.md",
   "docs/project-roadmap.md",
   "docs/release-playbook.md",
@@ -118,6 +119,10 @@ test("public docs describe a concrete adoption and release path", async () => {
     path.join(repoRoot, ".github", "ISSUE_TEMPLATE", "config.yml"),
     "utf8",
   );
+  const support = await fs.readFile(
+    path.join(repoRoot, "SUPPORT.md"),
+    "utf8",
+  );
   const bugTemplate = await fs.readFile(
     path.join(repoRoot, ".github", "ISSUE_TEMPLATE", "bug-report.yml"),
     "utf8",
@@ -134,9 +139,25 @@ test("public docs describe a concrete adoption and release path", async () => {
     path.join(repoRoot, ".github", "ISSUE_TEMPLATE", "open-question.yml"),
     "utf8",
   );
+  const maintenanceReviewTemplate = await fs.readFile(
+    path.join(repoRoot, ".github", "ISSUE_TEMPLATE", "maintenance-review.yml"),
+    "utf8",
+  );
   const reuseReportTemplate = await fs.readFile(
     path.join(repoRoot, ".github", "ISSUE_TEMPLATE", "reuse-report.yml"),
     "utf8",
+  );
+  const basicPathsOverride = JSON.parse(
+    await fs.readFile(
+      path.join(repoRoot, "examples", "basic-template", "maintainer-workflows.paths.json"),
+      "utf8",
+    ),
+  );
+  const minimalPathsOverride = JSON.parse(
+    await fs.readFile(
+      path.join(repoRoot, "examples", "minimal-copy", "maintainer-workflows.paths.json"),
+      "utf8",
+    ),
   );
 
   assert.match(readme, /Minimal rollout path/);
@@ -154,6 +175,7 @@ test("public docs describe a concrete adoption and release path", async () => {
   assert.match(readme, /neutral open-question issue path/);
   assert.match(readme, /If you try this in a real repository, open a reuse report/);
   assert.match(readme, /CODE_OF_CONDUCT\.md/);
+  assert.match(readme, /SUPPORT\.md/);
   assert.match(readme, /\.github\/ISSUE_TEMPLATE\/config\.yml/);
   assert.match(codeowners, /Replace this entry before reusing the scaffold/);
   assert.match(codeowners, /This repository keeps an active owner entry because it is the live source repository/);
@@ -161,7 +183,13 @@ test("public docs describe a concrete adoption and release path", async () => {
   assert.match(security, /contact the active maintainer directly for this repository/);
   assert.match(codeOfConduct, /Contributor Covenant/);
   assert.match(codeOfConduct, /public, respectful, and workable/);
+  assert.match(support, /Use this page if you are not sure where a question or report belongs yet/);
+  assert.match(support, /reuse report/);
+  assert.match(support, /open question/);
+  assert.match(support, /SECURITY\.md/);
   assert.match(issueTemplateConfig, /blank_issues_enabled: false/);
+  assert.match(issueTemplateConfig, /SUPPORT\.md/);
+  assert.match(issueTemplateConfig, /open question/i);
   assert.match(issueTemplateConfig, /open-question\.yml/);
   assert.match(issueTemplateConfig, /reuse-report\.yml/);
   assert.match(issueTemplateConfig, /contact_links:/);
@@ -169,6 +197,8 @@ test("public docs describe a concrete adoption and release path", async () => {
   assert.doesNotMatch(docsTemplate, /title:/);
   assert.doesNotMatch(workflowTemplate, /title:/);
   assert.match(openQuestionTemplate, /name: Open question/);
+  assert.match(maintenanceReviewTemplate, /name: Maintenance review/);
+  assert.match(maintenanceReviewTemplate, /public maintainer surface for drift/);
   assert.match(openQuestionTemplate, /labels:\s*\n\s*- triage/);
   assert.match(openQuestionTemplate, /rough report is fine/);
   assert.match(reuseReportTemplate, /name: Reuse report/);
@@ -192,11 +222,28 @@ test("public docs describe a concrete adoption and release path", async () => {
   assert.match(exampleReadme, /README\.md/);
   assert.match(exampleReadme, /CODEOWNERS`? and `?SECURITY\.md/);
   assert.match(exampleReadme, /copied and adapted/);
+  assert.match(exampleReadme, /maintainer-workflows\.paths\.json/);
   assert.match(minimalCopyReadme, /Minimal copy path example/);
   assert.match(minimalCopyReadme, /tiny-status-page/);
   assert.match(minimalCopyReadme, /What they kept/);
   assert.match(minimalCopyReadme, /What they skipped on purpose/);
   assert.match(minimalCopyReadme, /without the full validation layer/);
+  assert.match(minimalCopyReadme, /maintainer-workflows\.paths\.json/);
+  assert.deepEqual(basicPathsOverride.requiredPaths, [
+    "README.md",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    ".github/pull_request_template.md",
+    ".github/ISSUE_TEMPLATE/bug-report.yml",
+  ]);
+  assert.deepEqual(minimalPathsOverride.requiredPaths, [
+    "README.md",
+    "CONTRIBUTING.md",
+    "CODE_OF_CONDUCT.md",
+    "SECURITY.md",
+    ".github/pull_request_template.md",
+    ".github/ISSUE_TEMPLATE/open-question.yml",
+  ]);
   assert.match(roadmap, /How to use this roadmap/);
   assert.match(roadmap, /copy and cleanup cycle/);
   assert.match(roadmap, /real downstream first pass/);

@@ -31,6 +31,8 @@ For their first month, they kept the public maintainer surface small on purpose:
 
 They did not keep the full validation baseline yet. Once the handbook repository had a stable docs layout, they either could restore `scripts/validate-repo.mjs` or add a trimmed `maintainer-workflows.paths.json` that only checked the files they were actually maintaining.
 
+This example includes a small `maintainer-workflows.paths.json` so that trim starts from a believable first pass instead of a blank override file.
+
 ## What the first release looked like
 
 Their `v0.1.0` was not a feature release. It was the point where the repository stopped reading like a copied scaffold and started reading like `docs-ops-handbook`:

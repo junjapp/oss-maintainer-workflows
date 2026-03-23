@@ -1,0 +1,43 @@
+name: Maintenance review
+description: Re-check the public maintainer surface for drift after a release or routine cleanup pass.
+labels:
+  - maintenance
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this when the repository needs a small maintainer-facing review for drift, alignment, or cleanup.
+  - type: textarea
+    id: trigger
+    attributes:
+      label: What triggered this review?
+      description: Point at the release, cleanup pass, or visible drift that made this worth re-checking.
+      placeholder: A small docs or workflow release landed and I want to re-check the public surface for drift.
+    validations:
+      required: true
+  - type: checkboxes
+    id: areas
+    attributes:
+      label: Which areas need a pass?
+      options:
+        - label: README and contributor-facing docs
+        - label: Issue templates and support routing
+        - label: Release notes, changelog, or version surface
+        - label: Examples and copy-path guidance
+        - label: Governance files such as CODEOWNERS or SECURITY.md
+  - type: textarea
+    id: seams
+    attributes:
+      label: What looks off right now?
+      description: Call out copied defaults, mismatched wording, stale workflow surface, or anything else that now reads wrong in public.
+      placeholder: The example and release notes drifted apart after the last docs pass.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: What would a good cleanup look like?
+      description: Keep it maintainer-facing and concrete.
+      placeholder: The docs, examples, and release surface should read like the same repository again.
+    validations:
+      required: true
