@@ -14,9 +14,9 @@ The first public release should optimize for stability, clarity, and maintainabi
 
 ## Default cadence
 
-- Treat one to three coherent maintainer-facing improvements as enough for a release.
+- Treat a small related maintenance pass as enough for a release.
 - Do not batch unrelated fixes just to make a version look larger.
-- If a public docs, template, or workflow change would be visible to another maintainer today, it is usually a candidate for the same-day or next-day `v0.1.x` cut.
+- If a docs, template, or workflow change would be visible to another maintainer today, it is usually enough for the next small `v0.1.x` cut.
 
 ## Release note structure
 
@@ -39,7 +39,7 @@ Only tag a release after tests pass, the scaffold check passes, and the working 
 
 - Ship a small `v0.1.x` release when docs, templates, or release checks have changed in a way another maintainer would notice.
 - Keep the scope narrow enough that the release note can be read in under a minute.
-- One to three coherent maintainer-facing changes are enough; do not wait for a larger bundle if the release already tells a clear story.
+- A few related maintainer-facing changes are enough; do not wait for a larger bundle if the release already tells a clear story.
 - If the change belongs only to one consuming repository, leave it out of this template and keep it project-specific.
 
 ## Pre-release checklist

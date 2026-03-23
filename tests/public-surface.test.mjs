@@ -165,6 +165,7 @@ test("public docs describe a concrete adoption and release path", async () => {
   assert.match(readme, /Validation baseline/);
   assert.match(readme, /What tends to belong here/);
   assert.match(readme, /What this repository is not trying to do/);
+  assert.doesNotMatch(readme, /one to three coherent improvements/);
   assert.match(readme, /If your project only needs a lighter setup/);
   assert.doesNotMatch(readme, /README\.zh-CN\.md/);
   assert.match(readme, /README\.md`?, `?CODEOWNERS`?, and `?SECURITY\.md/);
@@ -211,9 +212,13 @@ test("public docs describe a concrete adoption and release path", async () => {
   assert.match(releasePlaybook, /Replace-first review/);
   assert.match(releasePlaybook, /same issue thread or release note follow-up/);
   assert.match(releasePlaybook, /package version aligned with the latest released repository state/);
+  assert.doesNotMatch(releasePlaybook, /same-day or next-day/);
+  assert.doesNotMatch(releasePlaybook, /one to three coherent/);
   assert.match(cadence, /Weekly outputs/);
   assert.match(cadence, /First follow-up issue/);
   assert.match(cadence, /Post-release follow-up/);
+  assert.doesNotMatch(cadence, /private note/);
+  assert.doesNotMatch(cadence, /one to three coherent/);
   assert.match(exampleReadme, /Basic template adoption example/);
   assert.match(exampleReadme, /fictional: `docs-ops-handbook`/);
   assert.match(exampleReadme, /What they changed before the first release/);

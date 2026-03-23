@@ -9,7 +9,7 @@ Keep repository operations predictable, lightweight, and easy to maintain over t
 1. Update the README when the repository scope changes.
 2. Keep issue templates and release notes aligned with actual maintainer behavior.
 3. Remove stale examples or outdated guidance before adding new surface area.
-4. Prefer one to three coherent maintainer-facing changes at a time.
+4. Keep each release small enough that another maintainer can explain what changed without reading a long changelog.
 
 ## Weekly routine
 
@@ -34,8 +34,8 @@ Keep repository operations predictable, lightweight, and easy to maintain over t
 ## Release rhythm
 
 - Treat small, well-documented releases as the default.
-- If one to three coherent maintainer-facing improvements are ready, ship the release instead of waiting for a larger batch.
-- Several small `v0.1.x` releases in the same week are fine if each cut is easy to explain.
+- If a few related maintainer-facing improvements are ready, ship the release instead of waiting for a larger batch.
+- Several small `v0.1.x` releases in the same week are fine if each cut still reads like one clear maintenance pass.
 - Update `CHANGELOG.md` before tagging.
 - Make sure the README, issue templates, and release notes describe the same workflow.
 
@@ -44,8 +44,8 @@ Keep repository operations predictable, lightweight, and easy to maintain over t
 - Re-read the public release notes one day later and check whether they still match the visible repository state.
 - If feedback points to copied defaults or unclear ownership wording, treat that as a small maintainer-facing follow-up rather than a large rewrite.
 - Keep the next adjustment narrow enough that it can be explained in one short issue comment and one short release note.
-- If the public surface needs a dedicated drift pass, open a maintenance review issue instead of burying the checklist in a private note.
-- Do not hold the next cut just to make the release look bigger; if the next one to three changes are coherent, ship again.
+- If the public surface needs a dedicated drift pass, open a maintenance review issue so the cleanup stays visible and scoped.
+- Do not hold the next cut just to make the release look bigger; if the next small pass is ready, ship again.
 
 ## Monthly cleanup
 

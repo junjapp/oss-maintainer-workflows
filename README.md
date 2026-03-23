@@ -158,7 +158,7 @@ The example directories include ready-to-copy `maintainer-workflows.paths.json` 
 
 - a clear intake and review routine
 - a repeatable release checklist
-- small maintainer-facing releases that can ship as soon as one to three coherent improvements are ready
+- small maintainable releases that stay easy to explain
 - contributor-facing docs that stay close to actual repository behavior
 - lightweight governance files that make maintenance easier to hand over
 
