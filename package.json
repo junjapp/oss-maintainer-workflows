@@ -1,6 +1,6 @@
 {
   "name": "oss-maintainer-workflows",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Reusable maintainer operations kit for small public OSS repositories.",
   "type": "module",
   "private": false,

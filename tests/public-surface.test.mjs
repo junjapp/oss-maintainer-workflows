@@ -247,7 +247,7 @@ test("public docs describe a concrete adoption and release path", async () => {
   assert.match(roadmap, /How to use this roadmap/);
   assert.match(roadmap, /copy and cleanup cycle/);
   assert.match(roadmap, /real downstream first pass/);
-  assert.equal(packageJson.version, "0.1.5");
+  assert.equal(packageJson.version, "0.1.6");
   assert.equal(
     packageJson.description,
     "Reusable maintainer operations kit for small public OSS repositories.",
