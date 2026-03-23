@@ -156,6 +156,10 @@ That keeps the public checks truthful while still giving the repository a minima
 - contributor-facing docs that stay close to actual repository behavior
 - lightweight governance files that make maintenance easier to hand over
 
+## Using this kit?
+
+If you try this in a real repository, open a reuse report and say what you kept, cut, or rewrote on the first pass. That kind of feedback is more useful here than a generic +1 because it shows where the maintainer layer is actually helping and where it still reads too much like the source repository.
+
 ## Next step
 
 Adapt the templates to a real repository, then keep the docs, issue flow, and release process aligned as the project evolves.

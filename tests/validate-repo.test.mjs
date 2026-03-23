@@ -90,6 +90,7 @@ test("requiredPaths reflect the renamed public docs layout", () => {
 
 test("requiredPaths include the generic issue intake path", () => {
   assert.ok(requiredPaths.includes(".github/ISSUE_TEMPLATE/open-question.yml"));
+  assert.ok(requiredPaths.includes(".github/ISSUE_TEMPLATE/reuse-report.yml"));
 });
 
 test("requiredPaths stay limited to the public scaffold", () => {

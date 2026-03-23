@@ -134,6 +134,10 @@ test("public docs describe a concrete adoption and release path", async () => {
     path.join(repoRoot, ".github", "ISSUE_TEMPLATE", "open-question.yml"),
     "utf8",
   );
+  const reuseReportTemplate = await fs.readFile(
+    path.join(repoRoot, ".github", "ISSUE_TEMPLATE", "reuse-report.yml"),
+    "utf8",
+  );
 
   assert.match(readme, /Minimal rollout path/);
   assert.match(readme, /Replace before reuse/);
@@ -148,6 +152,7 @@ test("public docs describe a concrete adoption and release path", async () => {
   assert.match(readme, /first downstream pass can look like/);
   assert.match(readme, /smallest believable downstream pass/);
   assert.match(readme, /neutral open-question issue path/);
+  assert.match(readme, /If you try this in a real repository, open a reuse report/);
   assert.match(readme, /CODE_OF_CONDUCT\.md/);
   assert.match(readme, /\.github\/ISSUE_TEMPLATE\/config\.yml/);
   assert.match(codeowners, /Replace this entry before reusing the scaffold/);
@@ -158,6 +163,7 @@ test("public docs describe a concrete adoption and release path", async () => {
   assert.match(codeOfConduct, /public, respectful, and workable/);
   assert.match(issueTemplateConfig, /blank_issues_enabled: false/);
   assert.match(issueTemplateConfig, /open-question\.yml/);
+  assert.match(issueTemplateConfig, /reuse-report\.yml/);
   assert.match(issueTemplateConfig, /contact_links:/);
   assert.doesNotMatch(bugTemplate, /title:/);
   assert.doesNotMatch(docsTemplate, /title:/);
@@ -165,6 +171,9 @@ test("public docs describe a concrete adoption and release path", async () => {
   assert.match(openQuestionTemplate, /name: Open question/);
   assert.match(openQuestionTemplate, /labels:\s*\n\s*- triage/);
   assert.match(openQuestionTemplate, /rough report is fine/);
+  assert.match(reuseReportTemplate, /name: Reuse report/);
+  assert.match(reuseReportTemplate, /real repository/);
+  assert.match(reuseReportTemplate, /kept, removed, or rewrote|keep, cut, or change/);
   assert.match(releasePlaybook, /Versioning notes/);
   assert.match(releasePlaybook, /Release note/);
   assert.match(releasePlaybook, /Pre-tag command sequence/);
@@ -191,7 +200,7 @@ test("public docs describe a concrete adoption and release path", async () => {
   assert.match(roadmap, /How to use this roadmap/);
   assert.match(roadmap, /copy and cleanup cycle/);
   assert.match(roadmap, /real downstream first pass/);
-  assert.equal(packageJson.version, "0.1.4");
+  assert.equal(packageJson.version, "0.1.5");
   assert.equal(
     packageJson.description,
     "Reusable maintainer operations kit for small public OSS repositories.",

@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.1.5] - 2026-03-23
+
+- Added a reuse-report issue path so real downstream maintainers can share what they kept, cut, or rewrote after trying the kit.
 - Added an open-question issue template and removed issue title prefixes so unclear reports can arrive without being forced into the wrong bucket first.
 - Added a smaller, concrete copy path for repositories that only want core docs, one issue template, and an optional trimmed validation baseline, including a new minimal-copy example.
 - Added a lightweight code of conduct and issue-template chooser config so copied repositories get a clearer public governance baseline.

@@ -1,0 +1,28 @@
+name: Reuse report
+description: Share how you copied, trimmed, or adapted this kit in a real repository.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this if you tried the kit in a real repository and want to share what helped, what you cut, or what still felt too source-repo-specific.
+  - type: textarea
+    id: repository_context
+    attributes:
+      label: What kind of repository did you try this in?
+      description: Describe the project shape in plain language. If you can share a public link, include it.
+    validations:
+      required: true
+  - type: textarea
+    id: kept_cut_changed
+    attributes:
+      label: What did you keep, cut, or change?
+      description: Call out the pieces you actually kept, removed, or rewrote on the first pass.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: What helped, and what still felt off?
+      description: Share what made reuse easier and what still felt too specific, heavy, or unclear.
+    validations:
+      required: true

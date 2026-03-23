@@ -1,5 +1,8 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Tried this in a real repository?
+    url: https://github.com/junjapp/oss-maintainer-workflows/issues/new?template=reuse-report.yml
+    about: Share what you kept, cut, or rewrote so the maintainer kit can improve against real reuse cases.
   - name: Not sure which issue type fits?
     url: https://github.com/junjapp/oss-maintainer-workflows/issues/new?template=open-question.yml
     about: Use the open question template if the current issue types feel too specific or do not fit your situation yet.

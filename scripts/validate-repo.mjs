@@ -17,6 +17,7 @@ export const requiredPaths = [
   ".github/ISSUE_TEMPLATE/bug-report.yml",
   ".github/ISSUE_TEMPLATE/docs-request.yml",
   ".github/ISSUE_TEMPLATE/open-question.yml",
+  ".github/ISSUE_TEMPLATE/reuse-report.yml",
   ".github/ISSUE_TEMPLATE/workflow-improvement.yml",
   ".github/workflows/validate.yml",
   ".github/workflows/release-check.yml",
