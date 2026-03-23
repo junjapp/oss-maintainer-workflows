@@ -20,7 +20,16 @@ The example repository here is fictional: `docs-ops-handbook`, a small OSS handb
 
 - any issue template they did not plan to answer in public
 - roadmap notes that only made sense for the source repository
+- the validation script until their docs layout stopped moving every week
 - extra example wording once the repo had one concrete adoption pass of its own
+
+For their first month, they kept the public maintainer surface small on purpose:
+
+- `README.md`, `CONTRIBUTING.md`, `SECURITY.md`
+- one issue template for real intake
+- the pull request template
+
+They did not keep the full validation baseline yet. Once the handbook repository had a stable docs layout, they either could restore `scripts/validate-repo.mjs` or add a trimmed `maintainer-workflows.paths.json` that only checked the files they were actually maintaining.
 
 ## What the first release looked like
 

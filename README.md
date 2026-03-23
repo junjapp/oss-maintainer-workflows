@@ -102,6 +102,32 @@ If you want to see what that first downstream pass can look like, start with `ex
 4. Confirm that `README.md`, `CODEOWNERS`, and `SECURITY.md` no longer read like copied example content.
 5. Only add more automation after the basic intake, review, and release routine stays stable for a few weeks.
 
+## Smallest believable copy path
+
+If you do not want the full scaffold, start with the narrowest public slice that still tells contributors how the repository is run:
+
+- keep `README.md`, `CONTRIBUTING.md`, `SECURITY.md`, and `.github/pull_request_template.md`
+- keep only the one or two issue templates you will actually answer in public
+- either keep `scripts/validate-repo.mjs` with a trimmed `maintainer-workflows.paths.json`, or remove the validation layer entirely until your repository has a stable docs layout
+
+A realistic first pass is often: one issue template, one pull request template, three core docs, and no extra roadmap or release files until the repository has shipped at least one real maintenance cycle.
+
+If you do keep the validation script, make the required path list match the smaller surface instead of pretending you still maintain the full source-repository baseline. For example:
+
+```json
+{
+  "requiredPaths": [
+    "README.md",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    ".github/pull_request_template.md",
+    ".github/ISSUE_TEMPLATE/bug-report.yml"
+  ]
+}
+```
+
+That keeps the public checks truthful while still giving the repository a minimal maintainer contract.
+
 ## What tends to belong here
 
 - Keep the files that help another maintainer run intake, review, release, and ownership work in public.
