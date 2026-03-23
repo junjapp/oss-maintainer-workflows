@@ -118,6 +118,22 @@ test("public docs describe a concrete adoption and release path", async () => {
     path.join(repoRoot, ".github", "ISSUE_TEMPLATE", "config.yml"),
     "utf8",
   );
+  const bugTemplate = await fs.readFile(
+    path.join(repoRoot, ".github", "ISSUE_TEMPLATE", "bug-report.yml"),
+    "utf8",
+  );
+  const docsTemplate = await fs.readFile(
+    path.join(repoRoot, ".github", "ISSUE_TEMPLATE", "docs-request.yml"),
+    "utf8",
+  );
+  const workflowTemplate = await fs.readFile(
+    path.join(repoRoot, ".github", "ISSUE_TEMPLATE", "workflow-improvement.yml"),
+    "utf8",
+  );
+  const openQuestionTemplate = await fs.readFile(
+    path.join(repoRoot, ".github", "ISSUE_TEMPLATE", "open-question.yml"),
+    "utf8",
+  );
 
   assert.match(readme, /Minimal rollout path/);
   assert.match(readme, /Replace before reuse/);
@@ -131,6 +147,7 @@ test("public docs describe a concrete adoption and release path", async () => {
   assert.match(readme, /maintainer-workflows\.paths\.json/);
   assert.match(readme, /first downstream pass can look like/);
   assert.match(readme, /smallest believable downstream pass/);
+  assert.match(readme, /neutral open-question issue path/);
   assert.match(readme, /CODE_OF_CONDUCT\.md/);
   assert.match(readme, /\.github\/ISSUE_TEMPLATE\/config\.yml/);
   assert.match(codeowners, /Replace this entry before reusing the scaffold/);
@@ -140,7 +157,14 @@ test("public docs describe a concrete adoption and release path", async () => {
   assert.match(codeOfConduct, /Contributor Covenant/);
   assert.match(codeOfConduct, /public, respectful, and workable/);
   assert.match(issueTemplateConfig, /blank_issues_enabled: false/);
+  assert.match(issueTemplateConfig, /open-question\.yml/);
   assert.match(issueTemplateConfig, /contact_links:/);
+  assert.doesNotMatch(bugTemplate, /title:/);
+  assert.doesNotMatch(docsTemplate, /title:/);
+  assert.doesNotMatch(workflowTemplate, /title:/);
+  assert.match(openQuestionTemplate, /name: Open question/);
+  assert.match(openQuestionTemplate, /labels:\s*\n\s*- triage/);
+  assert.match(openQuestionTemplate, /rough report is fine/);
   assert.match(releasePlaybook, /Versioning notes/);
   assert.match(releasePlaybook, /Release note/);
   assert.match(releasePlaybook, /Pre-tag command sequence/);

@@ -1,6 +1,5 @@
 name: Workflow improvement
-description: Propose a better maintainer workflow, automation, or template.
-title: "[workflow] "
+description: Use this if you already know the request is mainly about workflow or template behavior.
 labels:
   - workflow
 body:

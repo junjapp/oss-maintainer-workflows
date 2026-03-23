@@ -90,6 +90,7 @@ This repository keeps active maintainer values for its own public operation. Dow
 
 If you want to see what that first downstream pass can look like, start with `examples/basic-template/README.md`.
 If you want to see the smallest believable downstream pass without the full validation layer, start with `examples/minimal-copy/README.md`.
+If a repository cannot cleanly sort incoming reports on day one, keep a neutral open-question issue path instead of forcing every report into a bug, docs, or workflow bucket too early.
 
 ## Validation baseline
 

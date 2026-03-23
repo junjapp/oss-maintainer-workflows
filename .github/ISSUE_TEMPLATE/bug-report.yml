@@ -1,6 +1,5 @@
 name: Bug report
-description: Report a maintainer workflow bug or broken repository behavior.
-title: "[bug] "
+description: Use this only if you are clearly reporting broken repository behavior.
 labels:
   - bug
 body:

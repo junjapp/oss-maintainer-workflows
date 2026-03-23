@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+- Added an open-question issue template and removed issue title prefixes so unclear reports can arrive without being forced into the wrong bucket first.
 - Added a smaller, concrete copy path for repositories that only want core docs, one issue template, and an optional trimmed validation baseline, including a new minimal-copy example.
 - Added a lightweight code of conduct and issue-template chooser config so copied repositories get a clearer public governance baseline.
 - Tightened the public description so the repository reads as a maintainer operations kit for small public OSS repositories.

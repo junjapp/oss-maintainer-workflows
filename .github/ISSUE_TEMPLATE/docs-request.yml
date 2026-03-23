@@ -1,6 +1,5 @@
 name: Docs request
-description: Request improvements to maintainer-facing documentation.
-title: "[docs] "
+description: Use this if the gap is mainly in maintainer-facing docs, examples, or wording.
 labels:
   - docs
 body:

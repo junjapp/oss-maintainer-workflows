@@ -1,5 +1,8 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Not sure which issue type fits?
+    url: https://github.com/junjapp/oss-maintainer-workflows/issues/new?template=open-question.yml
+    about: Use the open question template if the current issue types feel too specific or do not fit your situation yet.
   - name: Reuse and adoption guidance
     url: https://github.com/junjapp/oss-maintainer-workflows/blob/main/README.md
     about: Read the README first if you are deciding whether to copy the full scaffold or only keep a lighter subset.

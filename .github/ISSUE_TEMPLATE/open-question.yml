@@ -1,0 +1,26 @@
+name: Open question
+description: Use this when your report does not cleanly fit bug, docs, or workflow yet.
+labels:
+  - triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If you are not sure which category fits yet, start here. A rough report is fine.
+  - type: textarea
+    id: situation
+    attributes:
+      label: What are you seeing?
+      description: Describe the problem, confusion, or suggestion in your own words.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Where did this show up?
+      description: Point to the file, workflow step, release note, example, or repository area if you can.
+  - type: textarea
+    id: hoped_outcome
+    attributes:
+      label: What outcome would help?
+      description: Say what would make the repository easier to understand, reuse, or maintain.
