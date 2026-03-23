@@ -65,13 +65,15 @@ This repository exists to keep that layer reusable, inspectable, and easy to ada
   - `docs/maintenance-cadence.md`
 - example adoption pass:
   - `examples/basic-template/README.md`
+  - `examples/minimal-copy/README.md`
 
 ## Quick start
 
 1. Copy this repository into a public project or mark it as a GitHub template repository.
-2. Replace maintainer-specific defaults in `README.md`, `CODEOWNERS`, and `SECURITY.md` before the first public release.
-3. Review the public docs and remove anything your repository will not actively maintain.
-4. Run the repository checks:
+2. If you only need the smallest believable copy path, start with `examples/minimal-copy/README.md` before you keep the full validation and release layer.
+3. Replace maintainer-specific defaults in `README.md`, `CODEOWNERS`, and `SECURITY.md` before the first public release.
+4. Review the public docs and remove anything your repository will not actively maintain.
+5. Run the repository checks:
 
 ```bash
 npm test
@@ -87,12 +89,14 @@ npm run validate:repo
 This repository keeps active maintainer values for its own public operation. Downstream repositories should replace those values immediately instead of treating them as scaffold defaults.
 
 If you want to see what that first downstream pass can look like, start with `examples/basic-template/README.md`.
+If you want to see the smallest believable downstream pass without the full validation layer, start with `examples/minimal-copy/README.md`.
 
 ## Validation baseline
 
 - `npm test` and `npm run validate:repo` describe the public baseline of this source repository.
 - Downstream repositories can trim, replace, or re-scope those checks once the scaffold is copied.
 - If your repository keeps a different docs layout or workflow set, update the validation script or provide a local `maintainer-workflows.paths.json` override instead of forcing your repository back into this exact shape.
+- If you do not want to keep the validation layer at all, the lighter path is documented in `examples/minimal-copy/README.md`.
 
 ## Minimal rollout path
 

@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
-- Added a smaller, concrete copy path for repositories that only want core docs, one issue template, and an optional trimmed validation baseline.
+- Added a smaller, concrete copy path for repositories that only want core docs, one issue template, and an optional trimmed validation baseline, including a new minimal-copy example.
 - Added a lightweight code of conduct and issue-template chooser config so copied repositories get a clearer public governance baseline.
 - Tightened the public description so the repository reads as a maintainer operations kit for small public OSS repositories.
 - Clarified that the validation script describes the source-repository baseline and can be replaced or trimmed by downstream repositories.

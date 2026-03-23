@@ -79,6 +79,13 @@ test("requiredPaths reflect the renamed public docs layout", () => {
     "docs/project-roadmap.md",
     "docs/release-playbook.md",
   ]);
+
+  const examplePaths = requiredPaths.filter((item) => item.startsWith("examples/")).sort();
+
+  assert.deepEqual(examplePaths, [
+    "examples/basic-template/README.md",
+    "examples/minimal-copy/README.md",
+  ]);
 });
 
 test("requiredPaths stay limited to the public scaffold", () => {

@@ -95,6 +95,10 @@ test("public docs describe a concrete adoption and release path", async () => {
     path.join(repoRoot, "examples", "basic-template", "README.md"),
     "utf8",
   );
+  const minimalCopyReadme = await fs.readFile(
+    path.join(repoRoot, "examples", "minimal-copy", "README.md"),
+    "utf8",
+  );
   const roadmap = await fs.readFile(
     path.join(repoRoot, "docs", "project-roadmap.md"),
     "utf8",
@@ -126,6 +130,7 @@ test("public docs describe a concrete adoption and release path", async () => {
   assert.match(readme, /This repository keeps active maintainer values for its own public operation/);
   assert.match(readme, /maintainer-workflows\.paths\.json/);
   assert.match(readme, /first downstream pass can look like/);
+  assert.match(readme, /smallest believable downstream pass/);
   assert.match(readme, /CODE_OF_CONDUCT\.md/);
   assert.match(readme, /\.github\/ISSUE_TEMPLATE\/config\.yml/);
   assert.match(codeowners, /Replace this entry before reusing the scaffold/);
@@ -154,6 +159,11 @@ test("public docs describe a concrete adoption and release path", async () => {
   assert.match(exampleReadme, /README\.md/);
   assert.match(exampleReadme, /CODEOWNERS`? and `?SECURITY\.md/);
   assert.match(exampleReadme, /copied and adapted/);
+  assert.match(minimalCopyReadme, /Minimal copy path example/);
+  assert.match(minimalCopyReadme, /tiny-status-page/);
+  assert.match(minimalCopyReadme, /What they kept/);
+  assert.match(minimalCopyReadme, /What they skipped on purpose/);
+  assert.match(minimalCopyReadme, /without the full validation layer/);
   assert.match(roadmap, /How to use this roadmap/);
   assert.match(roadmap, /copy and cleanup cycle/);
   assert.match(roadmap, /real downstream first pass/);

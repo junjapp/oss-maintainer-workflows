@@ -22,7 +22,8 @@ export const requiredPaths = [
   "docs/maintenance-cadence.md",
   "docs/project-roadmap.md",
   "docs/release-playbook.md",
-  "examples/basic-template/README.md"
+  "examples/basic-template/README.md",
+  "examples/minimal-copy/README.md"
 ];
 
 async function loadRequiredPathsOverride(rootDirectory) {
