@@ -1,6 +1,48 @@
 # oss-maintainer-workflows
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![GitHub release](https://img.shields.io/github/v/release/junjapp/oss-maintainer-workflows)](https://github.com/junjapp/oss-maintainer-workflows/releases)
+[![Node](https://img.shields.io/badge/node-%3E%3D22-brightgreen.svg)](.nvmrc)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
 Reusable maintainer operations kit for small public OSS repositories.
+
+Every small OSS project ends up rebuilding the same intake, review, and release routine from scratch. This kit gives you a tested starting point so you can spend time on the code instead of the process.
+
+---
+
+## Table of Contents
+
+- [What this repository is for](#what-this-repository-is-for)
+- [What this repository is not trying to do](#what-this-repository-is-not-trying-to-do)
+- [Why this layer matters](#why-this-layer-matters)
+- [Highlights](#highlights)
+- [Who should use it](#who-should-use-it)
+- [Who should not use it](#who-should-not-use-it)
+- [Included capabilities](#included-capabilities)
+- [Quick start](#quick-start)
+- [Replace before reuse](#replace-before-reuse)
+- [Validation baseline](#validation-baseline)
+- [Minimal rollout path](#minimal-rollout-path)
+- [Smallest believable copy path](#smallest-believable-copy-path)
+- [What tends to belong here](#what-tends-to-belong-here)
+- [Common adjustments](#common-adjustments)
+- [What a repository should gain from this kit](#what-a-repository-should-gain-from-this-kit)
+- [Using this kit?](#using-this-kit)
+
+---
+
+## Highlights
+
+🎯 **Issue intake ready** — six typed issue templates including open questions and reuse reports
+
+📋 **Review & release discipline** — PR template, release playbook, and pre-tag checks built in
+
+📄 **Contributor docs included** — CODE_OF_CONDUCT.md, CONTRIBUTING.md, SUPPORT.md, SECURITY.md
+
+🔧 **Validation built in** — `npm test` and `npm run validate:repo` keep the scaffold honest
+
+📦 **Copy-friendly** — two adoption examples with ready-to-trim path configs
 
 ## What this repository is for
 
@@ -24,7 +66,7 @@ If your project only needs a lighter setup, copy the smallest useful pieces inst
 
 ## Why this layer matters
 
-Small OSS projects often rebuild the same maintainer-facing surface from scratch:
+Small OSS projects often rebuild the same public maintenance basics from scratch:
 
 - how issues get triaged
 - what a pull request should include
@@ -88,7 +130,7 @@ npm run validate:repo
 - trim issue templates, release guidance, and roadmap notes that your repository will not keep
 - remove example wording as soon as your repository has its own maintainer routine
 
-This repository keeps active maintainer values for its own public operation. Downstream repositories should replace those values immediately instead of treating them as scaffold defaults.
+This repository keeps active maintainer values for its own public operation. Repositories that copy this kit should replace those values immediately instead of treating them as defaults.
 
 If you want to see what that first downstream pass can look like, start with `examples/basic-template/README.md`.
 If you want to see the smallest believable downstream pass without the full validation layer, start with `examples/minimal-copy/README.md`.
@@ -96,8 +138,8 @@ If a repository cannot cleanly sort incoming reports on day one, keep a neutral 
 
 ## Validation baseline
 
-- `npm test` and `npm run validate:repo` describe the public baseline of this source repository.
-- Downstream repositories can trim, replace, or re-scope those checks once the scaffold is copied.
+- `npm test` and `npm run validate:repo` describe the public baseline of this repository.
+- Repositories that copy this kit can trim, replace, or re-scope those checks once the scaffold is copied.
 - If your repository keeps a different docs layout or workflow set, update the validation script or provide a local `maintainer-workflows.paths.json` override instead of forcing your repository back into this exact shape.
 - If you do not want to keep the validation layer at all, the lighter path is documented in `examples/minimal-copy/README.md`.
 - If you do keep the validation layer, copy one of the example `maintainer-workflows.paths.json` files first and trim from there instead of guessing the minimum set from scratch.
@@ -120,7 +162,7 @@ If you do not want the full scaffold, start with the narrowest public slice that
 
 A realistic first pass is often: one issue template, one pull request template, three core docs, and no extra roadmap or release files until the repository has shipped at least one real maintenance cycle.
 
-If you do keep the validation script, make the required path list match the smaller surface instead of pretending you still maintain the full source-repository baseline. For example:
+If you do keep the validation script, make the required path list match the smaller surface instead of pretending you still maintain the full baseline from this repository. For example:
 
 ```json
 {
@@ -164,7 +206,7 @@ The example directories include ready-to-copy `maintainer-workflows.paths.json` 
 
 ## Using this kit?
 
-If you try this in a real repository, open a reuse report and say what you kept, cut, or rewrote on the first pass. That kind of feedback is more useful here than a generic +1 because it shows where the maintainer layer is actually helping and where it still reads too much like the source repository.
+If you try this in a real repository, open a reuse report and say what you kept, cut, or rewrote on the first pass. That kind of feedback is more useful here than a generic +1 because it shows where the kit is helping and where it still feels too specific.
 
 If you are not sure which public path fits your question or report, start with `SUPPORT.md`.
 

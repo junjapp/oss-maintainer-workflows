@@ -1,6 +1,12 @@
 # Contributing
 
-Thanks for contributing to this maintainer workflow scaffold.
+Thanks for considering a contribution — whether it is a typo fix, a workflow suggestion, or a reuse report from your own repository, every bit helps improve the kit for the next maintainer.
+
+## Good first contribution
+
+Not sure where to start? The single most useful contribution is a **reuse report**: try the kit in a real repository and tell us what you kept, cut, or rewrote. That kind of field feedback shapes the next release more than anything else.
+
+You can open a reuse report directly from the issue templates.
 
 ## Before opening a pull request
 
@@ -32,3 +38,4 @@ Out of scope by default:
 - explain maintainer impact
 - call out follow-up tasks if the work is partial
 - update `CHANGELOG.md` when behavior changes
+

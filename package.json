@@ -4,6 +4,11 @@
   "description": "Reusable maintainer operations kit for small public OSS repositories.",
   "type": "module",
   "private": false,
+  "homepage": "https://github.com/junjapp/oss-maintainer-workflows#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/junjapp/oss-maintainer-workflows.git"
+  },
   "scripts": {
     "test": "node --test",
     "validate:repo": "node scripts/validate-repo.mjs"
@@ -17,7 +22,16 @@
     "github-actions",
     "workflow-template",
     "issue-templates",
-    "repository-governance"
+    "repository-governance",
+    "oss-maintenance",
+    "repository-template",
+    "github-template",
+    "pull-request-template",
+    "release-checklist",
+    "maintainer-toolkit",
+    "codeowners",
+    "contributor-guidelines",
+    "devops"
   ],
   "license": "MIT"
 }

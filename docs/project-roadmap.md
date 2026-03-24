@@ -26,3 +26,6 @@
 - Expand the reusable skills and workflow templates based on real usage.
 - Keep optional integrations documented without turning the project into a vendor-specific template.
 - Add more small examples instead of turning the repository into a large framework.
+- Provide lightweight guidance for repositories that use coding agents alongside maintainer workflows.
+- Explore cross-repository reuse patterns for organizations that maintain multiple small public projects.
+
